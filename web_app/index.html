@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIBI Classifier - Real-time Detection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>SIBI-INSIGN</h1>
+            <p>Intelligent Sign Gesture Recognition for SIBI (Sistem Isyarat Bahasa Indonesia)</p>
+        </header>
+
+        <div class="main-content">
+            <!-- Tab Navigation -->
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="camera">📹 Kamera Real-time</button>
+                <button class="tab-btn" data-tab="upload">📤 Upload Gambar</button>
+            </div>
+
+            <!-- Camera Tab -->
+            <div class="tab-content active" id="camera-tab">
+                <div class="camera-section">
+                    <div class="video-container">
+                        <video id="webcam" autoplay playsinline></video>
+                        <canvas id="canvas"></canvas>
+                        <div class="status-overlay" id="status">
+                            <p>Loading model...</p>
+                        </div>
+                    </div>
+                    
+                    <div class="controls">
+                        <button id="startBtn" class="btn btn-primary" disabled>
+                            <span>▶️</span> Mulai Kamera
+                        </button>
+                        <button id="stopBtn" class="btn btn-danger" disabled>
+                            <span>⏸️</span> Stop
+                        </button>
+                        <button id="screenshotBtn" class="btn btn-secondary" disabled>
+                            <span>📸</span> Screenshot
+                        </button>
+                    </div>
+
+                    <div class="prediction-box">
+                        <h3>Hasil Deteksi:</h3>
+                        <div class="prediction-result">
+                            <div class="prediction-label">
+                                <span class="label-title">Prediksi:</span>
+                                <span id="predictedLabel" class="label-value">-</span>
+                            </div>
+                            <div class="prediction-confidence">
+                                <span class="conf-title">Confidence:</span>
+                                <span id="confidence" class="conf-value">0%</span>
+                            </div>
+                        </div>
+                        <div class="confidence-bar">
+                            <div id="confidenceBar" class="confidence-fill"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Upload Tab -->
+            <div class="tab-content" id="upload-tab">
+                <div class="upload-section">
+                    <div class="upload-area" id="uploadArea">
+                        <input type="file" id="fileInput" accept="image/*" hidden>
+                        <div class="upload-placeholder">
+                            <div class="upload-icon">📁</div>
+                            <p>Klik atau drag & drop gambar di sini</p>
+                            <p class="upload-hint">Format: JPG, PNG (Maks. 5MB)</p>
+                        </div>
+                        <img id="uploadedImage" class="uploaded-image" style="display: none;">
+                    </div>
+                    
+                    <div class="upload-controls">
+                        <button id="selectFileBtn" class="btn btn-primary">
+                            <span>📂</span> Pilih Gambar
+                        </button>
+                        <button id="analyzeBtn" class="btn btn-success" disabled>
+                            <span>🔍</span> Analisis
+                        </button>
+                        <button id="clearBtn" class="btn btn-secondary" disabled>
+                            <span>🗑️</span> Clear
+                        </button>
+                    </div>
+
+                    <div class="prediction-box">
+                        <h3>Hasil Analisis:</h3>
+                        <div class="prediction-result">
+                            <div class="prediction-label">
+                                <span class="label-title">Prediksi:</span>
+                                <span id="uploadPredictedLabel" class="label-value">-</span>
+                            </div>
+                            <div class="prediction-confidence">
+                                <span class="conf-title">Confidence:</span>
+                                <span id="uploadConfidence" class="conf-value">0%</span>
+                            </div>
+                        </div>
+                        <div class="confidence-bar">
+                            <div id="uploadConfidenceBar" class="confidence-fill"></div>
+                        </div>
+                        
+                        <div id="topPredictions" class="top-predictions" style="display: none;">
+                            <h4>Top 5 Prediksi:</h4>
+                            <div id="topPredictionsList"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Model: ResNet50 | Framework: TensorFlow.js</p>
+            <p id="modelStatus">Model belum dimuat</p>
+        </footer>
+    </div>
+
+    <!-- TensorFlow.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.11.0"></script>
+    <!-- HandPose for hand detection (alternative to MediaPipe) -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/handpose@0.0.7"></script>
+    <!-- Main Script -->
+    <script src="script.js"></script>
+</body>
+</html>
