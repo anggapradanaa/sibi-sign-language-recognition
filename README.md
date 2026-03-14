@@ -87,8 +87,6 @@ sibi-sign-language-recognition
 │   └── model_web
 │       └── model.json
 │
-├── docs/               # Dokumentasi tambahan
-│
 └── README.md
 ```
 
