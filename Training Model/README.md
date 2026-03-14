@@ -1,51 +1,51 @@
-# Training Model
+# 🧠 Training Model
 
-This folder contains the training pipeline for the **SIBI Sign Language Recognition** project. Three CNN architectures were experimented with: **ResNet50**, **VGG16**, and **MobileNetV2**.
-
----
-
-## Model Training
-
-Each model was trained using transfer learning with pretrained ImageNet weights. After training, the models were initially saved in **Keras `.h5` format**.
-
-To prepare the models for deployment, the `.h5` files were then converted into **TensorFlow SavedModel format** using the following scripts:
-
-* `mobilenetv2/h5_to_savedmodel_mobilenetv2.py`
-* `resnet50/h5_to_savedmodel_resnet50.py`
-* `vgg16/h5_to_savedmodel_vgg16.py`
+Folder ini berisi pipeline pelatihan model untuk proyek **SIBI Sign Language Recognition**. Tiga arsitektur CNN yang diuji dalam penelitian ini adalah **ResNet50**, **VGG16**, dan **MobileNetV2**.
 
 ---
 
-## Conversion for Web Deployment
+## ⚙️ Proses Training Model
 
-Since the final application runs in the browser using **TensorFlow.js**, the SavedModel needed to be converted again into **TensorFlow.js format**.
+Setiap model dilatih menggunakan pendekatan **transfer learning** dengan backbone pretrained dari ImageNet. Setelah proses training selesai, model pertama kali disimpan dalam format **Keras `.h5`**.
 
-The conversion pipeline used in this project:
+Untuk keperluan deployment dan kompatibilitas dengan proses konversi selanjutnya, file `.h5` kemudian dikonversi menjadi format **TensorFlow SavedModel** menggunakan script berikut:
+
+- `mobilenetv2/h5_to_savedmodel_mobilenetv2.py`
+- `resnet50/h5_to_savedmodel_resnet50.py`
+- `vgg16/h5_to_savedmodel_vgg16.py`
+
+---
+
+## 🌐 Konversi Model untuk Web
+
+Karena aplikasi akhir berjalan di browser menggunakan **TensorFlow.js**, model dalam format SavedModel perlu dikonversi kembali menjadi **format TensorFlow.js**.
+
+Pipeline konversi model pada proyek ini adalah sebagai berikut:
 
 Training → `.h5` model → **TensorFlow SavedModel** → **TensorFlow.js model**
 
-Among the three architectures tested, **ResNet50 achieved the highest performance**, therefore it was selected as the final model and converted to TensorFlow.js.
+Dari ketiga arsitektur yang diuji, **ResNet50 menghasilkan performa terbaik**, sehingga model ini dipilih sebagai model final dan dikonversi ke format TensorFlow.js untuk digunakan pada aplikasi web.
 
-The conversion process is implemented in:
+Proses konversi tersebut dilakukan pada file berikut:
 
 `savedmodel_to_js_resnet50.ipynb`
 
-The final TensorFlow.js model used by the web application is located in:
+Model akhir yang digunakan oleh aplikasi web berada pada folder:
 
 `web_app/model_web/`
 
 ---
 
-## Model Performance
+## 📊 Performa Model
 
-| Model           | Validation Accuracy | Test Accuracy |
-| --------------- | ------------------- | ------------- |
-| **ResNet50**    | 0.9955              | 0.9933        |
-| **VGG16**       | 0.9933              | 0.9910        |
-| **MobileNetV2** | 0.9933              | 0.9865        |
+| Model | Validation Accuracy | Test Accuracy |
+|------|--------------------|---------------|
+| **ResNet50** | 0.9955 | 0.9933 |
+| **VGG16** | 0.9933 | 0.9910 |
+| **MobileNetV2** | 0.9933 | 0.9865 |
 
 ---
 
-## Summary
+## 📝 Ringkasan
 
-Three CNN architectures were trained and evaluated. **ResNet50** produced the best results and was selected as the final model for deployment in the browser-based inference system using **TensorFlow.js**.
+Tiga arsitektur CNN dilatih dan dievaluasi pada dataset yang sama. **ResNet50** menunjukkan performa terbaik sehingga dipilih sebagai model final dan digunakan pada sistem inferensi berbasis web menggunakan **TensorFlow.js**.
