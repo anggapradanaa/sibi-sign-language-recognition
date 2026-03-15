@@ -127,7 +127,7 @@ Gunakan browser modern seperti:
 ## Mode Kamera Real-time
 
 1. Klik **Mulai Kamera**
-![Mulai-Kamera](https://raw.githubusercontent.com/anggapradanaa/sibi-sign-language-recognition/blob/main/images/Mulai%20Kamera.png)
+![Mulai-Kamera](https://raw.githubusercontent.com/anggapradanaa/sibi-sign-language-recognition/main/images/Mulai%20Kamera.png)
 3. Izinkan akses webcam
 4. Tunjukkan gestur tangan ke kamera
 5. Sistem menampilkan prediksi secara real-time
