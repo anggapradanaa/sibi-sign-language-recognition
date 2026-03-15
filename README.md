@@ -131,10 +131,12 @@ Gunakan browser modern seperti:
 3. Izinkan akses webcam
 4. Tunjukkan gestur tangan ke kamera
 5. Sistem menampilkan prediksi secara real-time
+![Hasil Prediksi Real-Time](https://raw.githubusercontent.com/anggapradanaa/sibi-sign-language-recognition/main/images/Hasil%20Prediksi%20Real-Time.png)
 
 ## Mode Upload Gambar
 
 1. Pilih tab **Upload Gambar**
+
 2. Upload gambar gestur
 3. Klik **Analisis**
 4. Sistem menampilkan **Top-5 prediksi**
