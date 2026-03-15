@@ -136,14 +136,14 @@ Gunakan browser modern seperti:
 ## Mode Upload Gambar
 
 1. Pilih tab **Upload Gambar**
-![Klik Upload Gambar](https://github.com/anggapradanaa/sibi-sign-language-recognition/main/images/Klik%20Upload%20Gambar.png)
+![Klik Upload Gambar](https://raw.githubusercontent.com/anggapradanaa/sibi-sign-language-recognition/main/images/Klik%20Upload%20Gambar.png)
 2. Upload gambar gestur
-![Upload Gambar](https://github.com/anggapradanaa/sibi-sign-language-recognition/main/images/Upload%20Gambar.png)
+![Upload Gambar](https://raw.githubusercontent.com/anggapradanaa/sibi-sign-language-recognition/main/images/Upload%20Gambar.png)
 3. Klik **Analisis**
-![Klik Analisis](https://github.com/anggapradanaa/sibi-sign-language-recognition/main/images/Klik%20Analisis.png)
+![Klik Analisis](https://raw.githubusercontent.com/anggapradanaa/sibi-sign-language-recognition/main/images/Klik%20Analisis.png)
 4. Sistem menampilkan **Top-5 prediksi**
-![Hasil 1](https://github.com/anggapradanaa/sibi-sign-language-recognition/main/images/Hasil%20Upload%20Gambar%20(2).png)
-![Hasil 2](https://github.com/anggapradanaa/sibi-sign-language-recognition/main/images/Hasil%20Upload%20Gambar%20(1).png)
+![Hasil 1](https://raw.githubusercontent.com/anggapradanaa/sibi-sign-language-recognition/main/images/Hasil%20Upload%20Gambar%20(2).png)
+![Hasil 2](https://raw.githubusercontent.com/anggapradanaa/sibi-sign-language-recognition/main/images/Hasil%20Upload%20Gambar%20(1).png)
 ---
 
 # ⚙️ Konfigurasi Model
