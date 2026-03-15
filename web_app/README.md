@@ -42,16 +42,24 @@ Pastikan file model tersedia:
 Buka `index.html` di browser modern (Chrome/Edge/Firefox recommended)
 
 ### 3. Mode Kamera Real-time
-1. Klik **"Mulai Kamera"**
-2. Izinkan akses webcam
-3. Tunjukkan gestur tangan SIBI ke kamera
-4. Lihat prediksi real-time dengan bounding box
+1. Klik **Mulai Kamera**
+![Mulai-Kamera](https://raw.githubusercontent.com/anggapradanaa/sibi-sign-language-recognition/main/images/Mulai%20Kamera.png)
+3. Izinkan akses webcam
+4. Tunjukkan gestur tangan ke kamera
+5. Sistem menampilkan prediksi secara real-time
+![Hasil Prediksi Real-Time](https://raw.githubusercontent.com/anggapradanaa/sibi-sign-language-recognition/main/images/Hasil%20Prediksi%20Real-Time.png)
 
-### 4. Mode Upload Gambar
-1. Pilih tab **"Upload Gambar"**
-2. Drag & drop atau klik untuk upload
-3. Klik **"Analisis"**
-4. Lihat hasil dengan top-5 predictions
+## Mode Upload Gambar
+
+1. Pilih tab **Upload Gambar**
+![Klik Upload Gambar](https://raw.githubusercontent.com/anggapradanaa/sibi-sign-language-recognition/main/images/Klik%20Upload%20Gambar.png)
+2. Upload gambar gestur
+![Upload Gambar](https://raw.githubusercontent.com/anggapradanaa/sibi-sign-language-recognition/main/images/Upload%20Gambar.png)
+3. Klik **Analisis**
+![Klik Analisis](https://raw.githubusercontent.com/anggapradanaa/sibi-sign-language-recognition/main/images/Klik%20Analisis.png)
+4. Sistem menampilkan **Top-5 prediksi**
+![Hasil 1](https://raw.githubusercontent.com/anggapradanaa/sibi-sign-language-recognition/main/images/Hasil%20Upload%20Gambar%20(2).png)
+![Hasil 2](https://raw.githubusercontent.com/anggapradanaa/sibi-sign-language-recognition/main/images/Hasil%20Upload%20Gambar%20(1).png)
 
 ## ⚙️ Konfigurasi
 
